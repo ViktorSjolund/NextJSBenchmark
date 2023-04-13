@@ -5,7 +5,7 @@ export const PageLayout = (props: PropsWithChildren) => {
   return (
     <main className="overflow-hidden flex items-center flex-col h-screen bg-gradient-to-r from-slate-300 via-slate-50 to-slate-300">
       <nav className="flex w-full items-center shrink-0 grow-0 h-10 justify-center bg-slate-700 border-b border-slate-600">
-        <div className="flex gap-4 w-full p-2 md:max-w-2xl">
+        <div className="font-semibold flex gap-4 w-full p-2 md:max-w-2xl">
           <Link href="/">
             <span>Home</span>
           </Link>
