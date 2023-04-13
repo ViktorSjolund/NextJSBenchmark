@@ -18,8 +18,8 @@ export default function Post({
         <title>{postData.title}</title>
       </Head>
       <article className="flex flex-col w-full items-center center text-slate-800 p-2">
-        <h1>{postData.title}</h1>
-        <div>{postData.date}</div>
+        <h1 className="text-4xl font-bold">{postData.title}</h1>
+        <div className="py-6">{postData.date}</div>
         <div
           className="flex flex-col items-center w-full prose pb-20"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
