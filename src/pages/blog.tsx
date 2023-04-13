@@ -1,24 +1,49 @@
 import Head from 'next/head';
 import { PageLayout } from '../components/layout';
+import { getSortedPostsData } from '@/lib/posts';
+import { GetServerSideProps } from 'next';
+import Link from 'next/link';
 
-export default function Home() {
-  const collection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    description: string;
+    id: string;
+  }[];
+}) {
   return (
     <PageLayout>
       <Head>
         <title>Blog</title>
       </Head>
-      <div className="flex grow-0 w-full flex-col p-2 gap-2">
-        {collection.map((item) => (
+      <div className="text-slate-700 flex grow-0 w-full flex-col p-2 gap-2">
+        {allPostsData.map(({ id, date, title, description }) => (
           <div
-            key={item}
-            className="h-[60px] grow-0 shrink-0 rounded-md border border-slate-400 bg-slate-300"
+            className="flex flex-col rounded-md bg-slate-100 border border-slate-300 p-3 gap-2"
+            key={id}
           >
-            <h2>Title</h2>
-            <h3>date</h3>
+            <Link className="font-bold" href={`/blog/${id}`}>
+              {title}
+            </Link>
+
+            <small>{description}</small>
+
+            <small className="font-light">{date}</small>
           </div>
         ))}
       </div>
     </PageLayout>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
