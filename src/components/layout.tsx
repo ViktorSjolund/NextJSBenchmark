@@ -12,7 +12,7 @@ export const PageLayout = (props: PropsWithChildren) => {
           <Link href="/blog">
             <span>Blog</span>
           </Link>
-          <Link href="/bigdata">
+          <Link href="/big-data">
             <span>Big Data</span>
           </Link>
         </div>
