@@ -17,14 +17,14 @@ export default function Home() {
       </Head>
       <PageLayout>
         <div className="flex-wrap justify-center gap-10 items-center flex border flex-col w-full h-full">
-          <div className="flex flex-row flex-nowrap">
+          <div className="items-center justify-center flex flex-row flex-wrap">
             <Image src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
             <div className={styles.thirteen}>
               <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
             </div>
           </div>
 
-          <div className="text-slate-800 font-bold text-xl w-full h-10 text-center">
+          <div className="text-slate-800 font-bold text-3xl w-full h-10 text-center">
             Benchmark Web Application
           </div>
         </div>
