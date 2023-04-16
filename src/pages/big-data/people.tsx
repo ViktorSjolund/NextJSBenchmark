@@ -21,7 +21,7 @@ export const PersonCard = (props: Person) => {
   )
 }
 
-export default function BigData() {
+export default function People() {
   return (
     <PageLayout>
       <div>
