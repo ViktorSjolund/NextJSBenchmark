@@ -17,7 +17,7 @@ export const PageLayout = (props: PropsWithChildren) => {
           </Link>
         </div>
       </nav>
-      <div className="flex flex w-full flex-grow justify-self-center overflow-y-auto bg-slate-200 shadow-xl scrollbar-thin scrollbar-track-slate-300 scrollbar-thumb-slate-500 scrollbar-thumb-rounded-md md:max-w-2xl md:border-x md:border-slate-300">
+      <div className="flex w-full flex-grow justify-self-center overflow-y-auto overflow-x-clip bg-slate-200 shadow-xl scrollbar-thin scrollbar-track-slate-300 scrollbar-thumb-slate-500 scrollbar-thumb-rounded-md md:max-w-2xl md:border-x md:border-slate-300">
         {props.children}
       </div>
     </main>
