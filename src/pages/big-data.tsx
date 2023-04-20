@@ -7,10 +7,10 @@ export default function BigData() {
 
   return (
     <PageLayout>
-      <div className='w-full'>
+      <div className="w-full">
         <Link href={router.pathname + '/people'}>
-          <div className='bg-slate-600 w-full p-4 flex flex-col'>
-            <h1 className='text-lg font-bold'>People Big Data</h1>
+          <div className="flex w-full flex-col bg-slate-600 p-4">
+            <h1 className="text-lg font-bold">People Big Data</h1>
             <p>A data collection of 1000 fake people</p>
           </div>
         </Link>

@@ -1,11 +1,11 @@
-import type { PropsWithChildren } from 'react';
-import Link from 'next/link';
+import type { PropsWithChildren } from 'react'
+import Link from 'next/link'
 
 export const PageLayout = (props: PropsWithChildren) => {
   return (
-    <main className="overflow-hidden flex items-center flex-col h-screen bg-gradient-to-r from-slate-300 via-slate-50 to-slate-300">
-      <nav className="flex w-full items-center shrink-0 grow-0 h-10 justify-center bg-slate-700 border-b border-slate-600">
-        <div className="font-semibold flex gap-4 w-full p-2 md:max-w-2xl">
+    <main className="flex h-screen flex-col items-center overflow-hidden bg-gradient-to-r from-slate-300 via-slate-50 to-slate-300">
+      <nav className="flex h-10 w-full shrink-0 grow-0 items-center justify-center border-b border-slate-600 bg-slate-700">
+        <div className="flex w-full gap-4 p-2 font-semibold md:max-w-2xl">
           <Link href="/">
             <span>Home</span>
           </Link>
@@ -17,9 +17,9 @@ export const PageLayout = (props: PropsWithChildren) => {
           </Link>
         </div>
       </nav>
-      <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-slate-500 scrollbar-thumb-rounded-md scrollbar-track-slate-300 flex justify-self-center shadow-xl w-full flex flex-grow bg-slate-200 md:border-x md:border-slate-300 md:max-w-2xl">
+      <div className="flex flex w-full flex-grow justify-self-center overflow-y-auto bg-slate-200 shadow-xl scrollbar-thin scrollbar-track-slate-300 scrollbar-thumb-slate-500 scrollbar-thumb-rounded-md md:max-w-2xl md:border-x md:border-slate-300">
         {props.children}
       </div>
     </main>
-  );
-};
+  )
+}
